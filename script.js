@@ -5,7 +5,7 @@ function inputNumber(id) {
   return num;
 }
 function targetId(id) {
-  const innertxt = document.getElementById(id).innerText;
+  const innertxt = document.getElementById(id);
   const num = parseFloat(innertxt);
 }
 // history btn
@@ -42,7 +42,8 @@ document
   .addEventListener("click", function (event) {
     event.preventDefault();
     //     getting value
-    const popup = document.getElementById("give_value").innerText;
-    console.log(popup);
+    const popUp = document.getElementById("give_value").classList.innertext;
+    console.log(popUp);
     const donate_for_noakhai = inputNumber("donate_for_noakhai");
+    console.log("is it connected");
   });
