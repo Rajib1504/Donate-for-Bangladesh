@@ -1,7 +1,7 @@
 // functions
 function inputNumber(id) {
-  const vlaue = document.getElementById(id).vlaue;
-  const num = parseFloat(vlaue);
+  const value = document.getElementById(id).value;
+  const num = parseFloat(value);
   return num;
 }
 // history btn
@@ -33,10 +33,10 @@ document.getElementById("donation").addEventListener("click", function () {
   history.classList.remove("bg-[#B4F461]", "border-[#B4F461]");
 });
 // input works from noakhali
-// document
-//   .getElementById("noakhali_donation")
-//   .addEventListener("click", function (event) {
-//     event.preventDefault;
-//     const donate_for_noakhai = inputNumber("donate_for_noakhai");
-//     console.log(donate_for_noakhai);
-//   });
+document
+  .getElementById("noakhali_donation")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    const donate_for_noakhai = inputNumber("donate_for_noakhai");
+    console.log(donate_for_noakhai);
+  });

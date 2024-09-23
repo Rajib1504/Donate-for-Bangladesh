@@ -42,13 +42,13 @@
     <title>Donate for Bangladesh</title>
   </head>
   <body>
-    <header class="z-30 sticky top-0">
-      <nav class="pt-2 bg-[#F9F7F3] flex justify-center">
+    <header class="z-30 sticky top-0 backdrop-blur-xl">
+      <nav class="pt-2 bg-[#f9f7f3a2] flex justify-center">
         <div
           class="flex justify-center md:justify-between lg:justify-between flex-wrap gap-4 w-full md:w-9/12 lg:w-9/12"
         >
           <!-- logo  -->
-          <div class="text-xl order-0 md:order-3 lg:order-3">
+          <div class="text-xl order-0 md:order-3 lg:order-3 pb-3">
             <div class="heading flex items-center">
               <img src="./assets/logo.png" alt="" />
               <h1 class="title">Donate For Bangladesh</h1>
@@ -57,7 +57,7 @@
           <!-- money part  -->
           <div
             id="counter"
-            class="text-[#111111B3] gap-1 pr-15px hidden md:flex lg:flex items-center order-4"
+            class="text-[#111111B3] pb-3 gap-1 pr-15px hidden md:flex lg:flex items-center order-4"
           >
             <img src="./assets/coin.png" alt="" class="w-7" />
             <span id="count">10000</span>
@@ -66,7 +66,7 @@
           <!-- blog btn  -->
           <button
             id="Blog"
-            class="btn border-2 border-[#B4F461] bg-[#B4F461] px-8 md:flex lg:flex hidden order-2"
+            class="mb-3 btn border-2 border-[#B4F461] bg-[#B4F461] px-8 md:flex lg:flex hidden order-2"
           >
             <a href="./blog.html" target="_blank">Blog</a>
           </button>
@@ -98,6 +98,8 @@
           <div class="modal-box flex justify-center items-center flex-col">
             <h3 class="text-4xl font-extrabold">Congrates!</h3>
             <img src="./assets/coin.png" class="py-4" />
+
+            <p id="give value" class="py-4 text-[#111111b3]"></p>
             <p class="py-4 text-[#111111B3]">You Have Donated For Humankind</p>
             <h5 class="py-4 text-lg font-bold">Successfully</h5>
             <div class="modal-action">
