@@ -43,13 +43,6 @@
         <div
           class="flex justify-center md:justify-between lg:justify-between flex-wrap gap-4 w-full md:w-9/12 lg:w-9/12"
         >
-          <!-- blog btn  -->
-          <button
-            class="btn border-2 border-[#B4F461] bg-[#B4F461] px-8 hidden md:flex lg:flex"
-            onclick="my_modal_1.showModal()"
-          >
-            Blog
-          </button>
           <!-- logo  -->
           <div class="text-xl">
             <div class="heading flex items-center">
@@ -58,14 +51,46 @@
             </div>
           </div>
           <!-- money part  -->
-          <div id="counter" class="flex gap-1 b pr-15px items-center">
+          <div
+            id="counter"
+            class="gap-1 b pr-15px hidden md:flex lg:flex items-center"
+          >
             <img
-              src="/assets/coin.png"
+              src="./assets/coin.png"
               alt=""
               class="border-2 border-dashed border-blue-200 w-7"
             />
             <span id="count">10000</span>
             <p>BDT</p>
+          </div>
+          <!-- blog btn  -->
+          <button
+            class="btn border-2 border-[#B4F461] bg-[#B4F461] px-8 md:flex lg:flex hidden"
+            onclick="my_modal_1.showModal()"
+          >
+            Blog
+          </button>
+          <div
+            id="small"
+            class="lg:hidden md:hidden flex justify-between w-full"
+          >
+            <!-- blog btn  -->
+            <button
+              class="btn border-2 border-[#B4F461] bg-[#B4F461] px-8"
+              onclick="my_modal_1.showModal()"
+            >
+              Blog
+            </button>
+            <!-- money part  -->
+            <div id="counter" class="flex gap-1 b pr-15px items-center">
+              <img
+                src="./assets/coin.png"
+                alt=""
+                class="border-2 border-dashed border-blue-200 w-7"
+              />
+              <span id="count">10000</span>
+              <p>BDT</p>
+            </div>
           </div>
         </div>
         <!-- popup section -->
@@ -101,11 +126,11 @@
         </div>
       </div>
     </header>
-    <main class="w-full md:w-9/12 lg:w-9/12mx-auto">
+    <main class="w-full md:w-9/12 lg:w-9/12 mx-auto">
       <div class="hero min-h-screen">
         <div class="hero-content flex-col lg:flex-row">
           <img
-            src="/assets/noakhali.png"
+            src="./assets/noakhali.png"
             class="max-w-sm rounded-lg shadow-2xl border-2 border-dashed border-gray-100 h-96"
           />
           <div>
