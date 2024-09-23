@@ -39,7 +39,7 @@
   </head>
   <body>
     <header class="z-30 sticky top-0">
-      <nav class="pb-4 px-2 bg-[#F9F7F3] flex justify-center">
+      <nav class="pt-2 bg-[#F9F7F3] flex justify-center">
         <div
           class="flex justify-center md:justify-between lg:justify-between flex-wrap gap-4 w-full md:w-9/12 lg:w-9/12"
         >
@@ -66,7 +66,6 @@
           <!-- blog btn  -->
           <button
             class="btn border-2 border-[#B4F461] bg-[#B4F461] px-8 md:flex lg:flex hidden"
-            onclick="my_modal_1.showModal()"
           >
             Blog
           </button>
@@ -75,10 +74,7 @@
             class="lg:hidden md:hidden flex justify-between w-full"
           >
             <!-- blog btn  -->
-            <button
-              class="btn border-2 border-[#B4F461] bg-[#B4F461] px-8"
-              onclick="my_modal_1.showModal()"
-            >
+            <button class="btn border-2 border-[#B4F461] bg-[#B4F461] px-8">
               Blog
             </button>
             <!-- money part  -->
@@ -95,7 +91,6 @@
         </div>
         <!-- popup section -->
         <!-- Open the modal using ID.showModal() method -->
-
         <dialog id="my_modal_1" class="modal">
           <div class="modal-box">
             <h3 class="text-lg font-bold">Hello!</h3>
@@ -112,7 +107,7 @@
       <!-- button section  -->
       <div class="command">
         <div
-          class="buttonHub mt-8 flex justify-center gap-2 flex-wrap text-black font-bold"
+          class="buttonHub pt-8 flex justify-center gap-2 flex-wrap text-black font-bold w-full md:w-9/12 lg:w-9/12 mx-auto bg-[#deeace48]"
         >
           <button id="donation" class="border-0 p-2 bg-[#B4F461] rounded-md">
             Donation
@@ -126,12 +121,15 @@
         </div>
       </div>
     </header>
-    <main class="w-full md:w-9/12 lg:w-9/12 mx-auto">
-      <div class="hero min-h-screen">
+    <main class="w-full md:w-9/12 lg:w-9/12 mx-auto mt-5">
+      <!-- noakhali  -->
+      <div
+        class="hero min-h-screen border-2 border-[#abb1b13c] p-2 rounded-lg mt-3"
+      >
         <div class="hero-content flex-col lg:flex-row">
           <img
             src="./assets/noakhali.png"
-            class="max-w-sm rounded-lg shadow-2xl border-2 border-dashed border-gray-100 h-96"
+            class="rounded-lg shadow-2xl border-2 border-dashed border-gray-100 h-96"
           />
           <div>
             <button
@@ -139,6 +137,7 @@
               class="flex justify-start gap-2 items-center border-2 border-[#1111110e] bg-[#1111110f] rounded-md text-[#111111B3] px-3"
             >
               <img src="./assets/coin.png" alt="" />
+              <!-- input the donation amount here -->
 
               <span id="recivedAmount">0</span>
               <span>BDT</span>
@@ -146,7 +145,7 @@
             <h1 class="text-3xl font-bold mt-2">
               Donate for Flood at Noakhali, Bangladesh
             </h1>
-            <p class="py-6 text-[#111111B3]">
+            <p class="py-4 text-[#111111B3]">
               The recent floods in Noakhali have caused significant damage to
               homes infrastructure. Your donation will help provide essential
               supplies and to those affected by this disaster. Every
@@ -154,17 +153,121 @@
               supporting the relief efforts and making a positive impact on the
               lives of those in need.
             </p>
+            <!-- get donation form here  -->
+
             <input
               type="number"
-              id="donate"
+              id="donate_for_noakhai"
               placeholder="Write Donation Amount"
-              class="font-normal p-5 border-2 border-gray-300 w-full rounded-lg"
+              class="font-normal p-4 border-2 border-gray-300 w-full rounded-lg"
             />
             <br />
             <button
-              class="btn btn-primary bg-[#B4F461] text-black font-bold border-0 w-full mt-4 hover:bg-[#a1ca6d]"
+              class="btn btn-primary bg-[#B4F461] text-black font-bold border-0 w-full mt-2 hover:bg-[#a1ca6d]"
+              onclick="my_modal_1.showModal()"
             >
-              Get Started
+              Donate Now
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- feni  -->
+      <div
+        class="hero min-h-screen border-2 border-[#abb1b13c] p-2 rounded-lg mt-4"
+      >
+        <div class="hero-content flex-col lg:flex-row">
+          <img
+            src="./assets/feni.png"
+            class="rounded-lg shadow-2xl border-2 border-dashed border-gray-100 h-96"
+          />
+          <div>
+            <button
+              id="recivedContainer"
+              class="flex justify-start gap-2 items-center border-2 border-[#1111110e] bg-[#1111110f] rounded-md text-[#111111B3] px-3"
+            >
+              <img src="./assets/coin.png" alt="" />
+              <!-- input the donation amount here -->
+
+              <span id="recivedAmount">600</span>
+              <span>BDT</span>
+            </button>
+            <h1 class="text-3xl font-bold mt-2">
+              Donate for Flood Relief in Feni,Bangladesh
+            </h1>
+            <p class="py-4 text-[#111111B3]">
+              The recent floods in Feni have devastated local communities,
+              leading to severe disruption and loss. Your generous donation will
+              help provide immediate aid, including food, clean water, and
+              medical supplies, to those affected by this calamity. Together, we
+              can offer crucial support and help rebuild lives in the aftermath
+              of this disaster. Every contribution counts towards making a real
+              difference. Please consider donating today to assist those in
+              urgent need.
+            </p>
+            <!-- get donation form here  -->
+            <input
+              type="number"
+              id="donate_for_feni"
+              placeholder="Write Donation Amount"
+              class="font-normal p-4 border-2 border-gray-300 w-full rounded-lg"
+            />
+            <br />
+            <button
+              class="btn btn-primary bg-[#B4F461] text-black font-bold border-0 w-full mt-2 hover:bg-[#a1ca6d]"
+              onclick="my_modal_1.showModal()"
+            >
+              Donate Now
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- quota  -->
+      <div
+        class="hero min-h-screen border-2 border-[#abb1b13c] p-2 rounded-lg mt-3"
+      >
+        <div class="hero-content flex-col lg:flex-row">
+          <img
+            src="./assets/quota-protest.png"
+            class="rounded-lg shadow-2xl border-2 border-dashed border-gray-100 h-96"
+          />
+          <div>
+            <button
+              id="recivedContainer"
+              class="flex justify-start gap-2 items-center border-2 border-[#1111110e] bg-[#1111110f] rounded-md text-[#111111B3] px-3"
+            >
+              <img src="./assets/coin.png" alt="" />
+              <!-- input the donation amount here -->
+              <span id="recivedAmount">2600</span>
+              <span>BDT</span>
+            </button>
+            <h1 class="text-3xl font-bold mt-2">
+              Aid for Injured in the Quota Movement
+            </h1>
+            <p class="py-4 text-[#111111B3]">
+              The recent Quota movement has resulted in numerous injuries and
+              significant hardship for many individuals. Your support is crucial
+              in providing medical assistance, rehabilitation, and necessary
+              supplies to those affected. By contributing, you help ensure that
+              injured individuals receive the care and support they need during
+              this challenging time. Every donation plays a vital role in
+              alleviating their suffering and aiding in their recovery. Please
+              consider making a donation to support these brave individuals in
+              their time of need.
+            </p>
+            <!-- get donation form here  -->
+
+            <input
+              type="number"
+              id="donate_for_quota"
+              placeholder="Write Donation Amount"
+              class="font-normal p-4 border-2 border-gray-300 w-full rounded-lg"
+            />
+            <br />
+            <button
+              class="btn btn-primary bg-[#B4F461] text-black font-bold border-0 w-full mt-2 hover:bg-[#a1ca6d]"
+              onclick="my_modal_1.showModal()"
+            >
+              Donate Now
             </button>
           </div>
         </div>
