@@ -4,6 +4,10 @@ function inputNumber(id) {
   const num = parseFloat(value);
   return num;
 }
+function targetId(id) {
+  const innertxt = document.getElementById(id).innerText;
+  const num = parseFloat(innertxt);
+}
 // history btn
 document.getElementById("history").addEventListener("click", function () {
   const history_details = document.getElementById("history_details");
@@ -37,6 +41,8 @@ document
   .getElementById("noakhali_donation")
   .addEventListener("click", function (event) {
     event.preventDefault();
+    //     getting value
+    const popup = document.getElementById("give_value").innerText;
+    console.log(popup);
     const donate_for_noakhai = inputNumber("donate_for_noakhai");
-    console.log(donate_for_noakhai);
   });
