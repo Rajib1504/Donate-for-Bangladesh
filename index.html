@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Lexend", system-ui;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+      }
+    </style>
+    <title>Donate for Bangladesh</title>
+  </head>
+  <body>
+    <header class="z-30 sticky top-0">
+      <nav class="pb-4 px-2 bg-[#F9F7F3] flex justify-center">
+        <div
+          class="flex justify-center md:justify-between lg:justify-between flex-wrap gap-4 w-full md:w-9/12 lg:w-9/12"
+        >
+          <!-- blog btn  -->
+          <button
+            class="btn border-2 border-[#B4F461] bg-[#B4F461] px-8 hidden md:flex lg:flex"
+            onclick="my_modal_1.showModal()"
+          >
+            Blog
+          </button>
+          <!-- logo  -->
+          <div class="text-xl">
+            <div class="heading flex items-center">
+              <img src="./assets/logo.png" alt="" />
+              <h1 class="title">Donate For Bangladesh</h1>
+            </div>
+          </div>
+          <!-- money part  -->
+          <div id="counter" class="flex gap-1 b pr-15px items-center">
+            <img
+              src="/assets/coin.png"
+              alt=""
+              class="border-2 border-dashed border-blue-200 w-7"
+            />
+            <span id="count">10000</span>
+            <p>BDT</p>
+          </div>
+        </div>
+        <!-- popup section -->
+        <!-- Open the modal using ID.showModal() method -->
+
+        <dialog id="my_modal_1" class="modal">
+          <div class="modal-box">
+            <h3 class="text-lg font-bold">Hello!</h3>
+            <p class="py-4">Press ESC key or click the button below to close</p>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      </nav>
+      <!-- button section  -->
+      <div class="command">
+        <div
+          class="buttonHub mt-8 flex justify-center gap-2 flex-wrap text-black font-bold"
+        >
+          <button id="donation" class="border-0 p-2 bg-[#B4F461] rounded-md">
+            Donation
+          </button>
+          <button
+            id="history"
+            class="text-[#111111B3] border-2 border-gray-400 p-2 rounded-md"
+          >
+            History
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="w-full md:w-9/12 lg:w-9/12mx-auto">
+      <div class="hero min-h-screen">
+        <div class="hero-content flex-col lg:flex-row">
+          <img
+            src="/assets/noakhali.png"
+            class="max-w-sm rounded-lg shadow-2xl border-2 border-dashed border-gray-100 h-96"
+          />
+          <div>
+            <button
+              id="recivedContainer"
+              class="flex justify-start gap-2 items-center border-2 border-[#1111110e] bg-[#1111110f] rounded-md text-[#111111B3] px-3"
+            >
+              <img src="./assets/coin.png" alt="" />
+
+              <span id="recivedAmount">0</span>
+              <span>BDT</span>
+            </button>
+            <h1 class="text-3xl font-bold mt-2">
+              Donate for Flood at Noakhali, Bangladesh
+            </h1>
+            <p class="py-6 text-[#111111B3]">
+              The recent floods in Noakhali have caused significant damage to
+              homes infrastructure. Your donation will help provide essential
+              supplies and to those affected by this disaster. Every
+              contribution, big or small, makes difference. Please join us in
+              supporting the relief efforts and making a positive impact on the
+              lives of those in need.
+            </p>
+            <input
+              type="number"
+              id="donate"
+              placeholder="Write Donation Amount"
+              class="font-normal p-5 border-2 border-gray-300 w-full rounded-lg"
+            />
+            <br />
+            <button
+              class="btn btn-primary bg-[#B4F461] text-black font-bold border-0 w-full mt-4 hover:bg-[#a1ca6d]"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
