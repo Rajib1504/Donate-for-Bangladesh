@@ -65,17 +65,21 @@
           </div>
           <!-- blog btn  -->
           <button
+            id="Blog"
             class="btn border-2 border-[#B4F461] bg-[#B4F461] px-8 md:flex lg:flex hidden order-2"
           >
-            Blog
+            <a href="./blog.html" target="_blank">Blog</a>
           </button>
           <div
             id="small"
             class="lg:hidden md:hidden flex justify-between w-full px-4"
           >
             <!-- blog btn  -->
-            <button class="btn border-2 border-[#B4F461] bg-[#B4F461] px-8">
-              Blog
+            <button
+              id="blog"
+              class="btn border-2 border-[#B4F461] bg-[#B4F461] px-8"
+            >
+              <a href="./blog.html" target="_blank">Blog</a>
             </button>
             <!-- money part  -->
             <div
@@ -112,13 +116,13 @@
         >
           <button
             id="donation"
-            class="border-0 p-3 bg-[#B4F461] rounded-md hover:bg-[#a0df8b7b]"
+            class="p-3 btn border-2 border-[#B4F461] bg-[#B4F461]"
           >
             Donation
           </button>
           <button
             id="history"
-            class="text-[#111111B3] hover:bg-[#a0df8b7b] border-2 border-gray-400 p-2 rounded-md"
+            class="text-[#111111B3] btn border-2 border-gray-400 p-4"
           >
             History
           </button>
@@ -127,7 +131,10 @@
     </header>
     <main>
       <!-- Donation form  -->
-      <section class="w-full md:w-9/12 lg:w-9/12 mx-auto mt-5 mb-24">
+      <section
+        id="donation_form"
+        class="w-full md:w-9/12 lg:w-9/12 mx-auto mt-5 mb-24"
+      >
         <!-- noakhali  -->
         <div class="hero border-2 border-[#abb1b13c] p-2 rounded-lg mt-3">
           <div class="hero-content flex-col lg:flex-row">
@@ -276,7 +283,7 @@
 
       <!-- history form  -->
       <section
-        id="history"
+        id="history_details"
         class="w-full md:w-9/12 lg:w-9/12 mx-auto my-16 hidden"
       >
         <div class="collapse border-2 border-[text-[#111111B3] my-3">
@@ -305,4 +312,5 @@
     </main>
   </body>
   <footer class="bg-[#F9F7F3] h-24"></footer>
+  <script src="./script.js"></script>
 </html>
