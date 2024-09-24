@@ -32,7 +32,6 @@ document
     let oldAmount_noakhali = document.getElementById(
       "recivedAmount_noakhali"
     ).innerText;
-    a;
     oldAmount_noakhali = parseFloat(oldAmount_noakhali);
     const donate_for_noakhai = inputNumber("donate_for_noakhai");
     const total_donation_noakhali = oldAmount_noakhali + donate_for_noakhai;
@@ -68,7 +67,7 @@ document
       "shadow-md"
     );
     div.innerHTML = `<h1 id="title" class=" text-xl font-bold">${donate_for_noakhai}Taka is Donated for Flood at Noakhali, Bangladesh</h1>
-    <p id ="date" class="text-[#111111B3] text-sm">${date}</p>
+    <p id ="date" class="text-[#111111B3] text-sm bg-[#dbf5baa4] my-2 pl-1 rounded-lg">${date}</p>
     `;
     document.getElementById("append_here").appendChild(div);
     my_modal_1.showModal();
@@ -116,7 +115,7 @@ document
     <h1 id="title_feni" class = "text-xl font-bold">${donate_for_feni} Taka is Donated for Flood Relief in Feni,Bangladesh
     </h1>
     
-    <p id ="date" class="text-[#111111B3] text-sm">${date}<p>
+    <p id ="date" class="text-[#111111B3] text-sm bg-[#dbf5baa4] my-2 pl-1 rounded-lg">${date}<p>
     `;
     my_modal_1.showModal();
     document.getElementById("append_here").appendChild(div);
@@ -157,7 +156,7 @@ document.getElementById("quota_btn").addEventListener("click", function () {
   <h1 id="title_feni" class = "text-xl font-bold">${donate_for_quota} Taka is Donated for Aid for Injured in the Quota Movement
   </h1>
   
-  <p id ="date" class="text-[#111111B3] text-sm">${date}<p>
+  <p id ="date" class="text-[#111111B3] text-sm bg-[#dbf5baa4] my-2 pl-1 rounded-lg">${date}<p>
   `;
   my_modal_1.showModal();
   document.getElementById("append_here").appendChild(div);
