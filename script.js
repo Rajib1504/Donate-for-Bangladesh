@@ -1,3 +1,4 @@
+console.log("script connected");
 // functions
 function inputNumber(id) {
   const value = document.getElementById(id).value;
@@ -5,8 +6,9 @@ function inputNumber(id) {
   return num;
 }
 function targetId(id) {
-  const innertxt = document.getElementById(id);
-  const num = parseFloat(innertxt);
+  const target = document.getElementById(id).innerText;
+  const n = parseFloat(target);
+  return n;
 }
 // history btn
 document.getElementById("history").addEventListener("click", function () {
@@ -22,6 +24,7 @@ document.getElementById("history").addEventListener("click", function () {
   donation.classList.add("text-[#111111B3]", "border-gray-400");
   donation.classList.remove("bg-[#B4F461]", "border-[#B4F461]");
 });
+// donation btn
 document.getElementById("donation").addEventListener("click", function () {
   const history_details = document.getElementById("history_details");
   const donation_form = document.getElementById("donation_form");
@@ -41,9 +44,24 @@ document
   .getElementById("noakhali_donation")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    //     getting value
-    const popUp = document.getElementById("give_value").classList.innertext;
-    console.log(popUp);
     const donate_for_noakhai = inputNumber("donate_for_noakhai");
-    console.log("is it connected");
+    console.log(donate_for_noakhali);
+    // input vlaue taken
+
+    const recivedAmount_noakhali = targetId("recivedAmount_noakhali");
+    console.log(recivedAmount_noakhali);
+    const noakhali_new_donation = (document.getElementById(
+      "recivedAmount_noakhali"
+    ).innerText = `${donate_for_noakhali}`);
+    console.log(noakhali_new_donation);
+    // new donation recived
+    const pop_up = targetId("give_value");
+    console.log(pop_up);
+    document.getElementById("give_value").innerText = `${donate_for_noakhali}`;
+    // pop_up money recived
+    const count = targetId("count");
+    console.log(count);
+    document.getElementById("count").innerText = `${
+      count - donate_for_noakhali
+    }`;
   });
