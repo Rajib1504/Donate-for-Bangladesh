@@ -1,13 +1,3 @@
-function inputNumber(id) {
-  const value = document.getElementById(id).value;
-  const num = parseFloat(value);
-  return num;
-}
-function targetId(id) {
-  const target = document.getElementById(id).innerText;
-  const n = parseFloat(target);
-  return n;
-}
 document.getElementById("history").addEventListener("click", function () {
   const history_details = document.getElementById("history_details");
   const donation_form = document.getElementById("donation_form");
@@ -48,9 +38,19 @@ document
     const donate_for_noakhali = inputNumber("donate_for_noakhai");
     const pop_up = targetId("give_value");
     const count = targetId("count");
+    if (donate_for_noakhai <= 0 || isNaN(donate_for_noakhai)) {
+      alert("invalid input");
+      document.getElementById("donate_for_noakhai").value = "";
+      return;
+    } else if (donate_for_noakhai >= count) {
+      alert("Our demand is less than your donation amount");
+      document.getElementById("donate_for_noakhai").value = "";
+      return;
+    }
     const noakhali_new_donation = (document.getElementById(
       "recivedAmount_noakhali"
     ).innerText = `${total_donation_noakhali}`);
+    const clickevent = document.getElementById("my_modal_1");
 
     document.getElementById("give_value").innerText = `${donate_for_noakhali}`;
     document.getElementById("count").innerText = `${
@@ -70,6 +70,7 @@ document
     <p id ="date" class="text-[#111111B3] text-sm">${date}</p>
     `;
     document.getElementById("append_here").appendChild(div);
+    my_modal_1.showModal();
 
     document.getElementById("donate_for_noakhai").value = "";
   });
@@ -84,6 +85,15 @@ document
     const date = new Date();
     const total_donation_feni = recivedAmount_feni + donate_for_feni;
 
+    if (donate_for_feni <= 0 || isNaN(donate_for_feni)) {
+      alert("invalid input");
+      document.getElementById("donate_for_feni").value = "";
+      return;
+    } else if (donate_for_feni >= count) {
+      alert("Our demand is less than your donation amount");
+      document.getElementById("donate_for_feni").value = "";
+      return;
+    }
     document.getElementById(
       "recivedAmount_feni"
     ).innerText = `${total_donation_feni}`;
@@ -107,6 +117,7 @@ document
     
     <p id ="date" class="text-[#111111B3] text-sm">${date}<p>
     `;
+    my_modal_1.showModal();
     document.getElementById("append_here").appendChild(div);
     document.getElementById("donate_for_feni").value = "";
   });
@@ -114,8 +125,20 @@ document
 document.getElementById("quota_btn").addEventListener("click", function () {
   const recivedAmount = targetId("recivedAmount");
   const donate_for_quota = inputNumber("donate_for_quota");
+  const count = targetId("count");
   const date = new Date();
   const total_amount_quota = recivedAmount + donate_for_quota;
+
+  if (donate_for_quota <= 0 || isNaN(donate_for_quota)) {
+    alert("invalid input");
+    document.getElementById("donate_for_quota").value = "";
+    return;
+  } else if (donate_for_quota >= count) {
+    alert("Our demand is less than your donation amount");
+    document.getElementById("donate_for_quota").value = "";
+    return;
+  }
+  document.getElementById("count").innerText = `${count - donate_for_quota}`;
   const give_value = targetId("give_value");
   document.getElementById("give_value").innerText = `${donate_for_quota}`;
   document.getElementById("recivedAmount").innerText = `${total_amount_quota}`;
@@ -135,6 +158,7 @@ document.getElementById("quota_btn").addEventListener("click", function () {
   
   <p id ="date" class="text-[#111111B3] text-sm">${date}<p>
   `;
+  my_modal_1.showModal();
   document.getElementById("append_here").appendChild(div);
   document.getElementById("donate_for_quota").value = "";
 });
