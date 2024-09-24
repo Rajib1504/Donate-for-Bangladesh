@@ -32,6 +32,7 @@ document
     let oldAmount_noakhali = document.getElementById(
       "recivedAmount_noakhali"
     ).innerText;
+    a;
     oldAmount_noakhali = parseFloat(oldAmount_noakhali);
     const donate_for_noakhai = inputNumber("donate_for_noakhai");
     const total_donation_noakhali = oldAmount_noakhali + donate_for_noakhai;
