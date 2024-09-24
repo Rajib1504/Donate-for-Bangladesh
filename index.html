@@ -43,79 +43,26 @@
   </head>
   <body>
     <header class="z-30 sticky top-0 backdrop-blur-xl">
-      <nav class="pt-2 bg-[#edfd9c99] flex justify-center">
-        <div
-          class="flex justify-center md:justify-between lg:justify-between flex-wrap gap-4 w-full md:w-9/12 lg:w-9/12"
-        >
-          <!-- logo  -->
-          <div class="text-xl order-0 md:order-3 lg:order-3 pb-3">
-            <div class="heading flex items-center">
-              <img src="./assets/logo.png" alt="" />
-              <h1 class="title">Donate For Bangladesh</h1>
-            </div>
-          </div>
-          <!-- money part  -->
-          <div
-            id="counter"
-            class="text-[#111111B3] pb-3 gap-1 pr-15px hidden md:flex lg:flex items-center order-4"
-          >
-            <img src="./assets/coin.png" alt="" class="w-7" />
-            <span id="count">1000000</span>
-            <p>BDT</p>
-          </div>
-          <!-- blog btn  -->
-          <button
-            id="Blog"
-            class="mb-3 btn border-2 border-[#B4F461] bg-[#B4F461] px-8 md:flex lg:flex hidden order-2"
-          >
-            <a href="./blog.html" target="_blank">Blog</a>
-          </button>
-          <div
-            id="small"
-            class="lg:hidden md:hidden flex justify-between w-full px-4"
-          >
-            <!-- blog btn  -->
-            <button
-              id="blog"
-              class="btn border-2 border-[#B4F461] bg-[#B4F461] px-8"
+      <nav class="border-[#B4F461] bg-[#B4F461] bg-opacity-20 py-4">
+        <div class="navbar container mx-auto">
+          <div class="navbar-start">
+            <a
+              class="btn btn-ghost text-xl border-[#B4F461] bg-[#B4F461]"
+              href="./blog.html"
+              >Blog</a
             >
-              <a href="./blog.html" target="_blank">Blog</a>
-            </button>
-            <!-- money part  -->
-            <div
-              id="counter"
-              class="text-[#111111B3] flex gap-1 b pr-15px items-center"
-            >
-              <img src="./assets/coin.png" alt="" class="w-7" />
-              <span id="count">10000</span>
-              <p>BDT</p>
+          </div>
+          <div class="navbar-center gap-4">
+            <img class="w-7 sm:w-10" src="./assets/logo.png" alt="" />
+            <h3 class="font-bold text-sm sm:text-2xl">Donate Bangladesh</h3>
+          </div>
+          <div class="navbar-end">
+            <div class="flex gap-2 items-center">
+              <img src="./assets/coin.png" alt="" />
+              <h1 class="font-semibold text-xl" id="count">550000</h1>
             </div>
           </div>
         </div>
-        <!-- popup section -->
-        <!-- Open the modal using ID.showModal() method -->
-        <dialog id="my_modal_1" class="modal">
-          <div class="modal-box flex justify-center items-center flex-col">
-            <h3 class="text-3xl md:text-4xl lg:text-4xl font-extrabold">
-              Congrates!
-            </h3>
-            <div class="flex justify-center items-center">
-              <img src="./assets/coin.png" class="py-2 lg:py-4 md:py-4" />
-              <p id="give_value" class="py-4 text-[#111111b3]">00</p>
-            </div>
-
-            <p class="py-2 md:py-4 lg:py-4 text-[#111111B3] text-center">
-              You Have Donated For Humankind
-            </p>
-            <h5 class="py-2 md:py-4 lg:py-4 text-lg font-bold">Successfully</h5>
-            <div class="modal-action">
-              <form method="dialog">
-                <!-- if there is a button in form, it will close the modal -->
-                <button class="btn">Close confirmation</button>
-              </form>
-            </div>
-          </div>
-        </dialog>
       </nav>
       <!-- button section  -->
       <div class="commandArea" id="functionControler">
@@ -158,7 +105,7 @@
                 <img src="./assets/coin.png" alt="" />
                 <!-- input the donation amount here -->
 
-                <span id="recivedAmount_noakhali">00</span>
+                <span id="recivedAmount_noakhali">500</span>
                 <span>BDT</span>
               </button>
               <h1 id="title_noakhali" class="text-3xl font-bold mt-2">
@@ -190,6 +137,7 @@
             </div>
           </div>
         </div>
+
         <!-- feni  -->
         <div class="hero border-2 border-[#abb1b13c] p-2 rounded-lg mt-4">
           <div class="hero-content flex-col lg:flex-row">
@@ -205,7 +153,7 @@
                 <img src="./assets/coin.png" alt="" />
                 <!-- input the donation amount here -->
 
-                <span id="recivedAmount_feni">00</span>
+                <span id="recivedAmount_feni">700</span>
                 <span>BDT</span>
               </button>
               <h1 class="text-3xl font-bold mt-2">
@@ -252,7 +200,7 @@
               >
                 <img src="./assets/coin.png" alt="" />
                 <!-- input the donation amount here -->
-                <span id="recivedAmount">00</span>
+                <span id="recivedAmount">300</span>
                 <span>BDT</span>
               </button>
               <h1 class="text-3xl font-bold mt-2">
@@ -288,7 +236,32 @@
           </div>
         </div>
       </section>
+      <section>
+        <!-- popup section -->
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="my_modal_1" class="modal">
+          <div class="modal-box flex justify-center items-center flex-col">
+            <h3 class="text-3xl md:text-4xl lg:text-4xl font-extrabold">
+              Congrates!
+            </h3>
+            <div class="flex justify-center items-center">
+              <img src="./assets/coin.png" class="py-2 lg:py-4 md:py-4" />
+              <p id="give_value" class="py-4 text-[#111111b3]">00</p>
+            </div>
 
+            <p class="py-2 md:py-4 lg:py-4 text-[#111111B3] text-center">
+              You Have Donated For Humankind
+            </p>
+            <h5 class="py-2 md:py-4 lg:py-4 text-lg font-bold">Successfully</h5>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close confirmation</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      </section>
       <!-- history form  -->
       <section
         id="history_details"
